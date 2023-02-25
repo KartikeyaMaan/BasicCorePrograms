@@ -1,7 +1,23 @@
 public class Core {
 
+    public static void factors(int number) {
+        int n = number;
+        System.out.println(1 + " ");
+        for (int i = 2; i * i <= number; i++) {
+            while (n % i == 0) {
+                System.out.println(i + " ");
+                n = n / i;
+            }
+            if (n == 1)
+                return;
+        }
+        if (n > 1) {
+            System.out.println(n);
+        }
+    }
+
     public static void harmonicNumber(int n) {
-        if(n==0){
+        if (n == 0) {
             System.out.println("n=0 not allowed");
             return;
         }
@@ -45,6 +61,7 @@ public class Core {
         leapYear(2020);
         powerOfTwo(10);
         harmonicNumber(6);
+        factors(12);
 
     }
 }
