@@ -1,5 +1,11 @@
 public class Core {
 
+    public static void powerOfTwo(int n) {
+        for (int i = 1; i <= n; i++) {
+            System.out.println("2 ^ " + i + " = " + (int) Math.pow(2, i));
+        }
+    }
+
     public static void leapYear(int year) {
         if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
             System.out.println("It is a leap year");
@@ -25,5 +31,6 @@ public class Core {
     public static void main(String[] args) {
         headOrTail(10);
         leapYear(2020);
+        powerOfTwo(10);
     }
 }
