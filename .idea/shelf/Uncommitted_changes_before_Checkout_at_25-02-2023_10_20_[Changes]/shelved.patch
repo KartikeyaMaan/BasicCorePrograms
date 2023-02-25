@@ -1,0 +1,68 @@
+Index: src/Core.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Core {\r\n\r\n    public static void swapTwoNumbers(int a, int b) {\r\n        a = a + b;\r\n        b = a - b;\r\n        a = a - b;\r\n        System.out.println(\"a = \" + a + \" b = \" + b);\r\n    }\r\n\r\n    private static void computeQuotientAndRemainder(int x, int y) {\r\n        System.out.println(\"Quotient = \" + x / y);\r\n        System.out.println(\"Remainder = \" + x % y);\r\n    }\r\n\r\n    public static void factors(int number) {\r\n        int n = number;\r\n        System.out.println(1 + \" \");\r\n        for (int i = 2; i * i <= number; i++) {\r\n            while (n % i == 0) {\r\n                System.out.println(i + \" \");\r\n                n = n / i;\r\n            }\r\n            if (n == 1)\r\n                return;\r\n        }\r\n        if (n > 1) {\r\n            System.out.println(n);\r\n        }\r\n    }\r\n\r\n    public static void harmonicNumber(int n) {\r\n        if (n == 0) {\r\n            System.out.println(\"n=0 not allowed\");\r\n            return;\r\n        }\r\n        double harmonicNumber = 0;\r\n        for (double i = 1; i <= n; i++) {\r\n            harmonicNumber += 1 / i;\r\n        }\r\n        System.out.println(\"Nth harmonic value = \" + harmonicNumber);\r\n    }\r\n\r\n    public static void powerOfTwo(int n) {\r\n        for (int i = 1; i <= n; i++) {\r\n            System.out.println(\"2 ^ \" + i + \" = \" + (int) Math.pow(2, i));\r\n        }\r\n    }\r\n\r\n    public static void leapYear(int year) {\r\n        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {\r\n            System.out.println(\"It is a leap year\");\r\n            return;\r\n        }\r\n        System.out.println(\"Not a leap year\");\r\n    }\r\n\r\n    public static void headOrTail(int numberOfFlips) {\r\n        int tailCount = 0, headCount = 0;\r\n        for (int i = 1; i <= numberOfFlips; i++) {\r\n            if (Math.random() < 0.5)\r\n                tailCount++;\r\n            else\r\n                headCount++;\r\n        }\r\n        int headPercent = ((headCount * 100) / (headCount + tailCount));\r\n        int tailPercent = ((tailCount * 100) / (headCount + tailCount));\r\n        System.out.println(\"Head Percentage = \" + headPercent);\r\n        System.out.println(\"Tail Percentage = \" + tailPercent);\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        headOrTail(10);\r\n        leapYear(2020);\r\n        powerOfTwo(10);\r\n        harmonicNumber(6);\r\n        factors(12);\r\n        computeQuotientAndRemainder(26, 3);\r\n        swapTwoNumbers(2, 3);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Core.java b/src/Core.java
+--- a/src/Core.java	
++++ b/src/Core.java	
+@@ -1,5 +1,21 @@
+ public class Core {
+ 
++    public static void checkVowel(char c) {
++        char ch = Character.toLowerCase(c);
++        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
++            System.out.println(c + " is a vowel");
++            return;
++        }
++        System.out.println();
++    }
++
++    public static void checkEvenOdd(int num) {
++        if (num % 2 == 0)
++            System.out.println("Number is even");
++        else
++            System.out.println("Number is odd");
++    }
++
+     public static void swapTwoNumbers(int a, int b) {
+         a = a + b;
+         b = a - b;
+@@ -69,6 +85,7 @@
+     }
+ 
+     public static void main(String[] args) {
++
+         headOrTail(10);
+         leapYear(2020);
+         powerOfTwo(10);
+@@ -76,5 +93,7 @@
+         factors(12);
+         computeQuotientAndRemainder(26, 3);
+         swapTwoNumbers(2, 3);
++        checkEvenOdd(5);
++        checkVowel('a');
+     }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"29ed19ba-1258-488c-941f-673300e4193d\" name=\"Changes\" comment=\"ADDED : code func for harmonic number\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/Core.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Core.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2MDDOlFEraEcFplQYB4K6dQA4FI\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"29ed19ba-1258-488c-941f-673300e4193d\" name=\"Changes\" comment=\"\" />\r\n      <created>1677293232571</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1677293232571</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"ADDED : welcome message\">\r\n      <created>1677293415579</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677293415579</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"ADDED : code func for Leap Year\">\r\n      <created>1677294778972</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677294778972</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"ADDED : code func for harmonic number\">\r\n      <created>1677295414061</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677295414061</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"ADDED : code func for quotient, remainder\">\r\n      <created>1677296438612</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677296438612</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ADDED : welcome message\" />\r\n    <MESSAGE value=\"ADDED : code func for Leap Year\" />\r\n    <MESSAGE value=\"ADDED : code func for harmonic number\" />\r\n    <MESSAGE value=\"ADDED : code func for quotient, remainder\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"ADDED : code func for quotient, remainder\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,7 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="29ed19ba-1258-488c-941f-673300e4193d" name="Changes" comment="ADDED : code func for harmonic number">
++    <list default="true" id="29ed19ba-1258-488c-941f-673300e4193d" name="Changes" comment="ADDED : code func for swapping two numbers">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
