@@ -1,5 +1,10 @@
 public class Core {
 
+    private static void computeQuotientAndRemainder(int x, int y) {
+        System.out.println("Quotient = " + x / y);
+        System.out.println("Remainder = " + x % y);
+    }
+
     public static void factors(int number) {
         int n = number;
         System.out.println(1 + " ");
@@ -62,6 +67,6 @@ public class Core {
         powerOfTwo(10);
         harmonicNumber(6);
         factors(12);
-
+        computeQuotientAndRemainder(26, 3);
     }
 }
