@@ -1,5 +1,17 @@
 public class Core {
 
+    public static void harmonicNumber(int n) {
+        if(n==0){
+            System.out.println("n=0 not allowed");
+            return;
+        }
+        double harmonicNumber = 0;
+        for (double i = 1; i <= n; i++) {
+            harmonicNumber += 1 / i;
+        }
+        System.out.println("Nth harmonic value = " + harmonicNumber);
+    }
+
     public static void powerOfTwo(int n) {
         for (int i = 1; i <= n; i++) {
             System.out.println("2 ^ " + i + " = " + (int) Math.pow(2, i));
@@ -32,5 +44,7 @@ public class Core {
         headOrTail(10);
         leapYear(2020);
         powerOfTwo(10);
+        harmonicNumber(6);
+
     }
 }
