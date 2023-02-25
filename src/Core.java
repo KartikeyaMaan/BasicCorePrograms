@@ -1,6 +1,5 @@
 public class Core {
 
-
     public static void largestAmongThree(int a, int b, int c) {
         int max = a;
         if (b > max)
@@ -88,14 +87,14 @@ public class Core {
     }
 
     public static void main(String[] args) {
-//        headOrTail(10);
-//        leapYear(2020);
-//        powerOfTwo(10);
-//        harmonicNumber(6);
-//        factors(12);
-//        computeQuotientAndRemainder(26, 3);
-//        swapTwoNumbers(2, 3);
-//        checkVowel('a');
+        headOrTail(10);
+        leapYear(2020);
+        powerOfTwo(10);
+        harmonicNumber(6);
+        factors(12);
+        computeQuotientAndRemainder(26, 3);
+        swapTwoNumbers(2, 3);
+        checkVowel('a');
         largestAmongThree(5, 7, 9);
     }
 }
