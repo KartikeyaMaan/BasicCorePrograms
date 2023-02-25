@@ -1,13 +1,22 @@
 public class Core {
 
 
+    public static void largestAmongThree(int a, int b, int c) {
+        int max = a;
+        if (b > max)
+            max = b;
+        if (c > max)
+            max = c;
+        System.out.println("Maximum number is : " + max);
+    }
+
     public static void checkVowel(char ch) {
         char c = Character.toLowerCase(ch);
-        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
             System.out.println(ch + " is a vowel");
             return;
         }
-        System.out.println(ch+" is a consonant");
+        System.out.println(ch + " is a consonant");
     }
 
     public static void swapTwoNumbers(int a, int b) {
@@ -79,14 +88,14 @@ public class Core {
     }
 
     public static void main(String[] args) {
-        headOrTail(10);
-        leapYear(2020);
-        powerOfTwo(10);
-        harmonicNumber(6);
-        factors(12);
-        computeQuotientAndRemainder(26, 3);
-        swapTwoNumbers(2, 3);
-        checkVowel('a');
-
+//        headOrTail(10);
+//        leapYear(2020);
+//        powerOfTwo(10);
+//        harmonicNumber(6);
+//        factors(12);
+//        computeQuotientAndRemainder(26, 3);
+//        swapTwoNumbers(2, 3);
+//        checkVowel('a');
+        largestAmongThree(5, 7, 9);
     }
 }
