@@ -1,5 +1,12 @@
 public class Core {
 
+    public static void swapTwoNumbers(int a, int b) {
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("a = " + a + " b = " + b);
+    }
+
     private static void computeQuotientAndRemainder(int x, int y) {
         System.out.println("Quotient = " + x / y);
         System.out.println("Remainder = " + x % y);
@@ -68,5 +75,6 @@ public class Core {
         harmonicNumber(6);
         factors(12);
         computeQuotientAndRemainder(26, 3);
+        swapTwoNumbers(2, 3);
     }
 }

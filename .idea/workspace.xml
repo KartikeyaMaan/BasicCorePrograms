@@ -72,13 +72,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677295414061</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ADDED : code func for quotient, remainder">
+      <created>1677296438612</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677296438612</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ADDED : welcome message" />
     <MESSAGE value="ADDED : code func for Leap Year" />
     <MESSAGE value="ADDED : code func for harmonic number" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADDED : code func for harmonic number" />
+    <MESSAGE value="ADDED : code func for quotient, remainder" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADDED : code func for quotient, remainder" />
   </component>
 </project>
