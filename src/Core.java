@@ -1,5 +1,15 @@
 public class Core {
 
+
+    public static void checkVowel(char ch) {
+        char c = Character.toLowerCase(ch);
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+            System.out.println(ch + " is a vowel");
+            return;
+        }
+        System.out.println(ch+" is a consonant");
+    }
+
     public static void swapTwoNumbers(int a, int b) {
         a = a + b;
         b = a - b;
@@ -76,5 +86,7 @@ public class Core {
         factors(12);
         computeQuotientAndRemainder(26, 3);
         swapTwoNumbers(2, 3);
+        checkVowel('a');
+
     }
 }
